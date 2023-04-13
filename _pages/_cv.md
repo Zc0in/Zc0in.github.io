@@ -1,13 +1,13 @@
 ---
 layout: archive
-title: "CV"
+title: "CV(informal)"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!-- {% include base_path %}
 
 Education
 ======
@@ -16,7 +16,7 @@ Education
 
 Work experience
 ======
-* None
+* Whitney Lab
   
 Skills
 ======
@@ -36,4 +36,4 @@ Skills
   
 Service and leadership
 ======
-* 2021 Summer Social Practice
+* 2021 Summer Social Practice -->
