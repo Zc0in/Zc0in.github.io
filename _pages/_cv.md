@@ -34,6 +34,6 @@ Skills
   
 
   
-Service and leadership
+<!-- Service and leadership
 ======
-* 2021 Summer Social Practice -->
+* 2021 Summer Social Practice --> -->
