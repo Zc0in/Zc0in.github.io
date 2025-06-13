@@ -167,6 +167,59 @@
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/diffbias00.pdf" alt="sym" width="300" height="200" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://foundation-model-research.github.io/difflens/">
+
+            <heading>Dissecting and Mitigating Diffusion Bias via Mechanistic Interpretability</heading></a>
+            <br>
+            Yingdong Shi<sup>*</sup>,
+            Changming Li<sup>*</sup>,
+            <b>Yifan Wang</b>,
+            Yongxiang Zhao,
+            Anqi Pang,
+            Sibei Yang,
+            Jingyi Yu,
+            Kan Ren
+            (* Equal contribution)
+            <br>
+            <em>CVPR</em>, 2025
+        </p>
+
+        <div class="paper" id="DiffLen">
+        <a href="https://foundation-model-research.github.io/difflens/">webpage</a> |
+        <a href="javascript:toggleblock('DiffLen_abs')">abstract</a> |
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Dissecting_and_Mitigating_Diffusion_Bias_via_Mechanistic_Interpretability_CVPR_2025_paper.pdf">paper</a> |
+        <!-- <a href="https://github.com/AlbusPeter/VEATIC">code</a> | -->
+
+        <p align="justify">
+            <i id="DiffLen_abs">
+              Diffusion models have demonstrated impressive capabilities in synthesizing diverse content. 
+              However, despite their high-quality outputs, these models often perpetuate social biases, including those related to gender and race.
+              These biases can potentially contribute to harmful real-world consequences, reinforcing stereotypes and exacerbating inequalities in various social contexts.
+              While existing research on diffusion bias mitigation has predominantly focused on guiding content generation, it often neglects the intrinsic mechanisms within diffusion models that causally drive biased outputs. 
+              In this paper, we investigate the internal processes of diffusion models, identifying specific decision-making mechanisms, termed bias features, embedded within the model architecture.
+              By directly manipulating these features, our method precisely isolates and adjusts the elements responsible for bias generation, permitting granular control over the bias levels in the generated content.
+              Through experiments on both unconditional and conditional diffusion models across various social bias attributes, we demonstrate our method's efficacy in managing generation distribution while preserving image quality.
+              We also dissect the discovered model mechanism, revealing different intrinsic features controlling fine-grained aspects of generation, boosting further research on mechanistic interpretability of diffusion models.
+              The project website is at \href{https://foundation-model-research.github.io/difflens}{https://foundation-model-research.github.io/difflens}.
+            </i>
+        </p>
+
+        </div>
+    </td>
+  </tr>
+
 
   <tr>
     <td width="33%" valign="top" align="center">
@@ -295,9 +348,9 @@
 
             <heading>VEATIC: Video-based Emotion and Affect Tracking in Context Dataset</heading></a>
             <br>
-            Zhihang Ren<sup>*</sup>
-            Jefferson Ortega<sup>*</sup>
-            <b>Yifan Wang</b><sup>*</sup>
+            Zhihang Ren<sup>*</sup>,
+            Jefferson Ortega<sup>*</sup>,
+            <b>Yifan Wang</b><sup>*</sup>,
             Zhimin Chen,
             David Whitney,
             Yunhui Guo,
