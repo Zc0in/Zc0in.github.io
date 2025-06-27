@@ -153,7 +153,7 @@
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
       <li> [06/2025] Our paper <a href="https://yfwang.me/">Ouroboros</a> has been accepted by ICCV 2025! </li>
-      <li> [06/2025] Our paper <a href="https://yfwang.me/">OTSurv</a> has been accepted by MICCAI 2025! </li>
+      <li> [06/2025] Our paper <a href="https://arxiv.org/abs/2506.20741">OTSurv</a> has been accepted by MICCAI 2025! </li>
       <li> [02/2025] Our paper <a href="https://foundation-model-research.github.io/difflens/">DiffLens</a> has been accepted by CVPR 2025! </li>
       <li> [01/2025] Our paper <a href="https://openreview.net/forum?id=WQQyJbr5Lh">Neuron Path</a> has been accepted by ICLR 2025! </li>
       <li> [08/2024] I will join Stony Brook University in 24Fall as a new PhD student! </li>
@@ -181,7 +181,7 @@
 
     <td width="67%" valign="top">
         <p>
-            <a href="https://yfwang.me/">
+            <a href="https://arxiv.org/abs/2506.20741">
 
             <heading>OTSurv: A Novel Multiple Instance Learning Framework for Survival Prediction with Heterogeneity-aware Optimal Transport</heading></a>
             <br>
@@ -196,25 +196,26 @@
 
         <div class="paper" id="OTSurv">
         <!-- <a href="https://yfwang.me/">webpage</a> | -->
-        <!-- <a href="javascript:toggleblock('OTSurv_abs')">abstract</a> | -->
-        <a href="https://yfwang.me/">paper</a> |
+        <a href="javascript:toggleblock('OTSurv_abs')">abstract</a> |
+        <a href="https://arxiv.org/abs/2506.20741/">paper</a> |
         <a href="https://github.com/Y-Research-SBU/OTSurv">code</a> |
 
         <p align="justify">
             <i id="OTSurv_abs">
               Survival prediction using whole slide images (WSIs) can be formulated as a multiple instance learning (MIL) problem. 
               However, existing MIL methods often fail to explicitly capture pathological heterogeneity within WSIs, both globally -- 
-              through long-tailed morphological distributions, and locally -- through tile-level prediction uncertainty.  
+              through long-tailed morphological distributions, and locally -- through tile-level prediction uncertainty. 
               Optimal transport (OT) provides a principled way of modeling such heterogeneity by incorporating marginal distribution constraints. 
               Building on this insight, we propose OTSurv, a novel MIL framework from an optimal transport perspective. 
               Specifically, OTSurv formulates survival predictions as a heterogeneity-aware OT problem with two constraints: 
               (1) global long-tail constraint that models prior morphological distributions to avert both mode collapse and 
-              excessive uniformity by regulating transport mass allocation, and 
-              (2) local uncertainty-aware constraint that prioritizes high-confidence patches while suppressing noise by progressively raising the total transport mass.  
+              excessive uniformity by regulating transport mass allocation, and (2) local uncertainty-aware constraint 
+              that prioritizes high-confidence patches while suppressing noise by progressively raising the total transport mass.  
               We then recast the initial OT problem, augmented by these constraints, into an unbalanced OT formulation that can be solved with an efficient, 
               hardware-friendly matrix scaling algorithm. Empirically, OTSurv sets new state-of-the-art results across six popular benchmarks, 
-              including an absolute 4.4% improvement in C-index on the TCGA-BLCA dataset. In addition, OTSurv achieves statistical significance in 
-              log-rank tests and offers high interpretability, making it a powerful tool for survival prediction in digital pathology.
+              achieving an absolute 3.6% improvement in average C-index. In addition, OTSurv achieves statistical significance in log-rank tests and offers high interpretability, 
+              making it a powerful tool for survival prediction in digital pathology. 
+              Our codes are available at <a href="https://github.com/Y-Research-SBU/OTSurv">https://github.com/Y-Research-SBU/OTSurv</a>.
             </i>
         </p>
 
