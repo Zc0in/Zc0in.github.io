@@ -174,6 +174,51 @@
   <tr>
     <td width="33%" valign="top" align="center">
         <a href="#">
+        <img src="img/csrv2.png" alt="sym" width="300" height="200" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://openreview.net/forum?id=CTpQW4yMUL">
+
+            <heading>CSRv2: Unlocking Ultra-Sparse Embeddings</heading></a>
+            <br>
+            Lixuan Guo, Yifei Wang, Tiansheng Wen, <b>Yifan Wang</b>, Aosong Feng, Bo Chen, Stefanie Jegelka, Chenyu You
+            <br>
+            <em>ICLR</em>, 2026
+        </p>
+
+        <div class="paper" id="csrv2s">
+        <!-- <a href="https://siwensun.github.io/ouroboros-project/">webpage</a> | -->
+        <a href="javascript:toggleblock('csrv2_abs')">abstract</a> |
+        <a href="https://openreview.net/forum?id=CTpQW4yMUL">paper</a> |
+        <!-- <a href="https://github.com/Y-Research-SBU/Ouroboros">code</a> | -->
+
+        <p align="justify">
+            <i id="csrv2_abs">
+              In the era of large foundation models, the quality of embeddings has become a central determinant of downstream task performance and overall system capability. 
+              Yet widely used dense embeddings are often extremely high-dimensional (e.g., 4096), incurring substantial costs in storage, memory, and inference latency. 
+              To address these, Contrastive Sparse Representation (CSR) is recently proposed as a promising direction, mapping dense embeddings into high-dimensional but $k$-sparse vectors, in contrast to compact dense embeddings such as Matryoshka Representation Learning (MRL). 
+              Despite its promise, CSR suffers severe degradation in the ultra-sparse regime (e.g., $k \leq 4$), where over 80% of neurons remain inactive, leaving much of its efficiency potential unrealized.
+              In this paper, we introduce <b>CSRv2</b>, a principled training approach designed to make ultra-sparse embeddings viable. 
+              CSRv2 stabilizes sparsity learning through progressive $k$-annealing, enhances representational quality via supervised contrastive objectives, and ensures end-to-end adaptability with full backbone finetuning. 
+              CSRv2 reduces dead neurons from 80% to 20% and delivers a 14% accuracy gain at $k=2$, bringing ultra-sparse embeddings on par with CSR at $k=8$ and MRL at 32 dimensions, <i>all with only two active features</i>. 
+              While maintaining comparable performance, CSRv2 delivers a 7&times; speedup over MRL, and yields up to <b>300&times; improvements in compute and memory efficiency</b> relative to dense embeddings.
+              Extensive experiments across text (MTEB, multiple state-of-the-art LLM embeddings (Qwen and e5-Mistral-7B)) and vision (ImageNet-1k) demonstrate that CSRv2 makes ultra-sparse embeddings practical without compromising performance. 
+              By making extreme sparsity viable, CSRv2 broadens the design space for large-scale, real-time, and edge-deployable AI systems where both embedding quality and efficiency are critical.            </i>
+        </p>
+
+        </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
         <img src="img/ouroboros.png" alt="sym" width="300" height="200" style="border-radius:15px">
         <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
           <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
@@ -539,6 +584,10 @@
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+  hideblock('csrv2_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
