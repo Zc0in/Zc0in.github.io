@@ -175,6 +175,53 @@
   <tr>
     <td width="33%" valign="top" align="center">
         <a href="#">
+        <img src="img/horizon.png" alt="sym" width="300" height="200" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://yfwang.me/">
+
+            <heading>HorizonForge: Driving Scene Editing with Any Trajectories and Any Vehicles</heading></a>
+            <br>
+            <b>Yifan Wang</b>, Francesco Pittaluga, Zaid Tasneem, Chenyu You, Manmohan Chandraker, Ziyu Jiang
+            <br>
+            <em>CVPR</em>, 2026
+        </p>
+
+        <div class="paper" id="horizon">
+        <a href="https://yfwang.me/">webpage</a> |
+        <a href="javascript:toggleblock('horizon_abs')">abstract</a> |
+        <!-- <a href="">paper</a> | -->
+        <!-- <a href="">code</a> | -->
+
+        <p align="justify">
+            <i id="horizon_abs">
+            Controllable driving scene generation is critical for realistic and scalable autonomous driving simulation, 
+            yet existing approaches struggle to jointly achieve photorealism and precise control. 
+            We introduce HorizonForge, a unified framework that reconstructs scenes as editable Gaussian Splats and Meshes, 
+            enabling fine-grained 3D manipulation and language-driven vehicle insertion. 
+            Edits are rendered through a noise-aware video diffusion process that enforces spatial and temporal consistency, 
+            producing diverse scene variations in a single feed-forward pass without per-trajectory optimization. 
+            To standardize evaluation, we further propose HorizonSuite, 
+            a comprehensive benchmark spanning ego- and agent-level editing tasks such as trajectory modifications and object manipulation. 
+            Extensive experiments show that Gaussian-Mesh representation delivers substantially higher fidelity than alternative 3D representations, 
+            and that temporal priors from video diffusion are essential for coherent synthesis. 
+            Combining these findings, HorizonForge establishes a simple yet powerful paradigm for photorealistic, controllable driving simulation, 
+            achieving an 83.4% user-preference gain and a 25.19% FID improvement over the second best state-of-the-art method.
+            </p>
+
+        </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
         <img src="img/csrv2.png" alt="sym" width="300" height="200" style="border-radius:15px">
         <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
           <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
@@ -193,7 +240,7 @@
             <em>ICLR</em>, 2026
         </p>
 
-        <div class="paper" id="csrv2s">
+        <div class="paper" id="csrv2">
         <a href="https://y-research-sbu.github.io/CSRv2/">webpage</a> |
         <a href="javascript:toggleblock('csrv2_abs')">abstract</a> |
         <a href="https://openreview.net/forum?id=CTpQW4yMUL">paper</a> |
@@ -585,6 +632,10 @@
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+  hideblock('horizon_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
