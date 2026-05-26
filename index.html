@@ -153,7 +153,7 @@
     <ul>
       <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
       <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
-      <li> [04/2026] Our paper <a href="https://yfwang.me/">JET</a> has been accepted by ICML 2026! </li>
+      <li> [04/2026] Our paper <a href="https://y-research-sbu.github.io/JET/">JET</a> has been accepted by ICML 2026! </li>
       <li> [02/2026] Our paper <a href="https://arxiv.org/abs/2602.21333">HorizonForge</a> has been accepted by CVPR 2026! </li>
       <li> [01/2026] Our paper <a href="https://openreview.net/forum?id=CTpQW4yMUL">CSRV2</a> has been accepted by ICLR 2026! </li>
       <li> [12/2025] Thrilled to be recognized as IEEE Transactions on Medical Imaging Bronze Distinguished Reviewer! </li>
@@ -174,6 +174,56 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/jet.png" alt="sym" width="300" height="200" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://arxiv.org/abs/2605.21280">
+
+            <heading>Let EEG Models Learn EEG</heading></a>
+            <br>
+            <b>Yifan Wang</b>, Yijia Ma, Wen Li, Chenyu You
+            <br>
+            <em>ICML</em>, 2026
+        </p>
+
+        <div class="paper" id="jet">
+        <a href="https://y-research-sbu.github.io/JET/">webpage</a> |
+        <a href="javascript:toggleblock('jet_abs')">abstract</a> |
+        <a href="https://arxiv.org/abs/2605.21280">paper</a> |
+        <a href="https://github.com/Y-Research-SBU/JET">code</a> |
+
+        <p align="justify">
+            <i id="jet_abs">
+            High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints 
+            in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation 
+            via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and 
+            spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal 
+            dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. 
+            In this work, we argue that effective EEG generation requires models that operate directly on the continuous 
+            evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional 
+            flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector 
+            field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics 
+            without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned 
+            dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve 
+            spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, 
+            JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. 
+            Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and 
+            principled approach to EEG generation.
+            </p>
+
+        </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center">
@@ -636,6 +686,10 @@
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+
+<script xml:space="preserve" language="JavaScript">
+  hideblock('jet_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
