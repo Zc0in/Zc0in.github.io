@@ -28,7 +28,12 @@ function togglebib(paperid)
 function toggleblock(blockId)
 {
    var block = document.getElementById(blockId);
-   if (block.style.display == 'none') {
+   if (!block) {
+      return;
+   }
+
+   var display = window.getComputedStyle ? getComputedStyle(block, null).display : block.style.display;
+   if (display == 'none') {
     block.style.display = 'block' ;
    } else {
     block.style.display = 'none' ;
@@ -38,5 +43,8 @@ function toggleblock(blockId)
 function hideblock(blockId)
 {
    var block = document.getElementById(blockId);
+   if (!block) {
+      return;
+   }
    block.style.display = 'none' ;
 }
