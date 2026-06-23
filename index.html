@@ -156,7 +156,7 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-      <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://yfwang.me/">VisReason</a> have been accepted by ECCV 2026! </li>
+      <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
       <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
       <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
       <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
@@ -181,6 +181,56 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/visreason.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://arxiv.org/abs/2511.17731">
+
+            <heading>VisReason: A Large-Scale Dataset for Visual Chain-of-Thought Reasoning</heading></a>
+            <br>
+            Lingxiao Li, <b>Yifan Wang</b>, Xinyan Gao, Chen Tang, Xiangyu Yue, Chenyu You
+            <br>
+            <em>ECCV</em>, 2026
+        </p>
+
+        <div class="paper" id="visreason">
+        <!-- <a href="https://y-research-sbu.github.io/VisReason/">webpage</a> | -->
+        <a href="javascript:toggleblock('visreason_abs')">abstract</a> |
+        <a href="https://arxiv.org/abs/2511.17731">paper</a> |
+        <!-- <a href="https://github.com/Y-Research-SBU/VisReason">code</a> | -->
+
+        <p align="justify">
+            <i id="visreason_abs">
+            Chain-of-Thought (CoT) prompting has proven remarkably effective for eliciting complex reasoning in large 
+            language models (LLMs). Yet, its potential in multimodal large language models (MLLMs) remains largely untapped, 
+            hindered by the absence of large-scale datasets that capture the rich, spatially grounded reasoning intrinsic to 
+            visual understanding. Existing visual-CoT resources are typically small, domain-specific, or lack the human-like 
+            stepwise structure necessary for compositional visual reasoning. In this paper, we introduce VisReason, a 
+            large-scale dataset designed to advance visual Chain-of-Thought reasoning. VisReason comprises 489K annotated 
+            examples spanning four diverse domains, each featuring multi-round, human-like rationales that guide MLLMs 
+            through interpretable visual reasoning steps. Building upon this, we curate VisReason-Pro, a 165K subset produced 
+            with a stronger expert-level GPT annotator, enriched with detailed reasoning traces and 3D spatial grounding via 
+            depth-informed annotations. Fine-tuning the state-of-the-art Qwen2.5-VL model on VisReason and VisReason-Pro 
+            yields substantial improvements in step-by-step visual reasoning accuracy, interpretability, and cross-benchmark 
+            generalization. These results demonstrate that VisReason equips MLLMs with more systematic and generalizable 
+            reasoning capabilities. We envision VisReason as a cornerstone for cultivating human-like visual reasoning, 
+            paving the way toward the next generation of multimodal intelligence.
+            </i>
+            </p>
+
+        </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center">
