@@ -55,6 +55,12 @@
     display: none;
   }
 
+  .news-list {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 16px;
+  }
+
   </style>
   <link rel="icon" type="image/png" href="img/icon.png">
   <script type="text/javascript" src="js/hidebib.js"></script>
@@ -155,7 +161,7 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
-    <ul>
+    <ul class="news-list">
       <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
       <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
       <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
