@@ -157,7 +157,7 @@
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
       <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://yfwang.me/">VisReason</a> have been accepted by ECCV 2026! </li>
-      <li> [06/2026] Our paper <a href="https://yfwang.me/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
+      <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
       <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
       <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
       <li> [04/2026] Our paper <a href="https://y-research-sbu.github.io/JET/">JET</a> has been accepted by ICML 2026! </li>
@@ -181,6 +181,57 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/NeuroSonic.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://yfwang.me/">
+
+            <heading>NeuroSonic: Conditional Flow Matching for EEG-to-Speech Reconstruction</heading></a>
+            <br>
+            Wenhao Gao<sup>*</sup>, <b>Yifan Wang</b><sup>*</sup>,, Yijia Ma, Carl Yang, Wen Li, Chenyu You (* Equal contribution)
+            <br>
+            <em>MICCAI</em>, 2026
+        </p>
+
+        <div class="paper" id="neurosonic">
+        <a href="https://y-research-sbu.github.io/NeuroSonic/">webpage</a> |
+        <a href="javascript:toggleblock('neurosonic_abs')">abstract</a> |
+        <!-- <a href="https://arxiv.org/abs/2605.21280">paper</a> | -->
+        <a href="https://github.com/Y-Research-SBU/NeuroSonic">code</a> |
+
+        <p align="justify">
+            <i id="neurosonic_abs">
+            Reconstructing continuous speech from scalp electroencephalography (EEG) remains fundamentally challenging. 
+            EEG provides a weak, spatially diffuse, and highly variable measurement of distributed cortical activity, 
+            whereas speech is organized as a coherent acoustic trajectory with strong harmonic and temporal structure. 
+            The resulting mismatch makes waveform regression unstable and causes stochastic multi-step generation to be sensitive to 
+            artifact-dependent conditioning and subject variability.
+            We introduce NeuroSonic, a conditional flow-matching framework for EEG-to-speech reconstruction. 
+            Instead of predicting waveforms directly or refining them through stochastic denoising, NeuroSonic learns a deterministic 
+            probability-flow velocity field that transports a noise-corrupted acoustic state toward clean speech under EEG conditioning. 
+            EEG and audio are embedded into a shared token space and processed by a time-conditioned gated Transformer that parameterizes 
+            the transport ordinary differential equation. This formulation models trajectory evolution explicitly while avoiding iterative stochastic sampling.
+            We evaluate NeuroSonic on the CineBrain and EAV benchmarks under cross-subject evaluation. Across both datasets, the proposed 
+            method improves distributional realism, spectral fidelity, and perceptual quality over representative GAN-, diffusion-, and 
+            mean-flow baselines, with up to a 26.3\% gain in overall perceptual quality.
+            The performance gap is most evident in artifact-heavy segments, where conditioning variability is strongest. These findings 
+            indicate that deterministic conditional transport provides a stable and effective formulation for EEG-driven speech reconstruction. 
+            </i>
+            </p>
+
+        </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center">
