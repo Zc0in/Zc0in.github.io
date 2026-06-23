@@ -57,8 +57,25 @@
 
   .news-list {
     max-height: 220px;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding-right: 16px;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #999 #f1f1f1;
+  }
+
+  .news-list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .news-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .news-list::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
   }
 
   </style>
