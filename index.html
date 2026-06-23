@@ -55,27 +55,47 @@
     display: none;
   }
 
+  .news-scroll-wrap {
+    position: relative;
+    margin: 1em 0;
+  }
+
   .news-list {
     max-height: 220px;
-    overflow-y: scroll;
-    padding-right: 16px;
-    scrollbar-gutter: stable;
-    scrollbar-width: thin;
-    scrollbar-color: #999 #f1f1f1;
+    overflow-y: auto;
+    margin: 0;
+    padding-right: 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .news-list::-webkit-scrollbar {
-    width: 8px;
+    display: none;
   }
 
-  .news-list::-webkit-scrollbar-track {
+  .news-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    width: 8px;
+    height: 100%;
     background: #f1f1f1;
     border-radius: 4px;
   }
 
-  .news-list::-webkit-scrollbar-thumb {
+  .news-scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    min-height: 28px;
     background: #999;
     border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .news-scrollbar-thumb:hover {
+    background: #777;
   }
 
   </style>
@@ -178,25 +198,30 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
-    <ul class="news-list">
-      <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
-      <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
-      <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
-      <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
-      <li> [04/2026] Our paper <a href="https://y-research-sbu.github.io/JET/">JET</a> has been accepted by ICML 2026! </li>
-      <li> [02/2026] Our paper <a href="https://arxiv.org/abs/2602.21333">HorizonForge</a> has been accepted by CVPR 2026! </li>
-      <li> [01/2026] Our paper <a href="https://openreview.net/forum?id=CTpQW4yMUL">CSRV2</a> has been accepted by ICLR 2026! </li>
-      <li> [12/2025] Thrilled to be recognized as IEEE Transactions on Medical Imaging Bronze Distinguished Reviewer! </li>
-      <li> [06/2025] Our paper <a href="https://arxiv.org/abs/2508.14461">Ouroboros</a> has been accepted by ICCV 2025! </li>
-      <li> [06/2025] Our paper <a href="https://arxiv.org/abs/2506.20741">OTSurv</a> has been accepted by MICCAI 2025! </li>
-      <li> [05/2025] I will join NEC Labs America this summer as a research intern with <a href="https://geekjzy.github.io/">Ziyu Jiang</a>! </li>
-      <li> [02/2025] Our paper <a href="https://foundation-model-research.github.io/difflens/">DiffLens</a> has been accepted by CVPR 2025! </li>
-      <li> [01/2025] Our paper <a href="https://openreview.net/forum?id=WQQyJbr5Lh">Neuron Path</a> has been accepted by ICLR 2025! </li>
-      <li> [08/2024] I will join Stony Brook University in 24Fall as a CS PhD student! </li>
-      <li> [03/2024] Our paper <a href="https://arxiv.org/abs/2401.10278">EEGFormer</a> has been accepted by AAAI 2024 SSS on Clinical FMs! </li>
-      <li> [10/2023] Our paper <a href="https://veatic.github.io/">VEATIC Dataset</a> has been accepted by WACV 2024! </li>
-      <li> [06/2023] I completed the one-year exchange in UC Berkeley! </li>
-    </ul>
+    <div class="news-scroll-wrap">
+      <ul class="news-list">
+        <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
+        <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
+        <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
+        <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
+        <li> [04/2026] Our paper <a href="https://y-research-sbu.github.io/JET/">JET</a> has been accepted by ICML 2026! </li>
+        <li> [02/2026] Our paper <a href="https://arxiv.org/abs/2602.21333">HorizonForge</a> has been accepted by CVPR 2026! </li>
+        <li> [01/2026] Our paper <a href="https://openreview.net/forum?id=CTpQW4yMUL">CSRV2</a> has been accepted by ICLR 2026! </li>
+        <li> [12/2025] Thrilled to be recognized as IEEE Transactions on Medical Imaging Bronze Distinguished Reviewer! </li>
+        <li> [06/2025] Our paper <a href="https://arxiv.org/abs/2508.14461">Ouroboros</a> has been accepted by ICCV 2025! </li>
+        <li> [06/2025] Our paper <a href="https://arxiv.org/abs/2506.20741">OTSurv</a> has been accepted by MICCAI 2025! </li>
+        <li> [05/2025] I will join NEC Labs America this summer as a research intern with <a href="https://geekjzy.github.io/">Ziyu Jiang</a>! </li>
+        <li> [02/2025] Our paper <a href="https://foundation-model-research.github.io/difflens/">DiffLens</a> has been accepted by CVPR 2025! </li>
+        <li> [01/2025] Our paper <a href="https://openreview.net/forum?id=WQQyJbr5Lh">Neuron Path</a> has been accepted by ICLR 2025! </li>
+        <li> [08/2024] I will join Stony Brook University in 24Fall as a CS PhD student! </li>
+        <li> [03/2024] Our paper <a href="https://arxiv.org/abs/2401.10278">EEGFormer</a> has been accepted by AAAI 2024 SSS on Clinical FMs! </li>
+        <li> [10/2023] Our paper <a href="https://veatic.github.io/">VEATIC Dataset</a> has been accepted by WACV 2024! </li>
+        <li> [06/2023] I completed the one-year exchange in UC Berkeley! </li>
+      </ul>
+      <div class="news-scrollbar" aria-hidden="true">
+        <div class="news-scrollbar-thumb"></div>
+      </div>
+    </div>
   </td></tr>
 </table>
 
@@ -824,6 +849,94 @@
 </table>
 
 <script type="text/javascript">
+var newsList = document.querySelector('.news-list');
+var newsScrollbar = document.querySelector('.news-scrollbar');
+var newsScrollbarThumb = document.querySelector('.news-scrollbar-thumb');
+
+if (newsList && newsScrollbar && newsScrollbarThumb) {
+  var isDraggingNewsScrollbar = false;
+  var dragStartY = 0;
+  var dragStartScrollTop = 0;
+
+  function clampNewsScrollbar(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function updateNewsScrollbar() {
+    var scrollableHeight = newsList.scrollHeight - newsList.clientHeight;
+    var trackHeight = newsScrollbar.clientHeight;
+
+    if (scrollableHeight <= 0 || trackHeight <= 0) {
+      newsScrollbar.style.display = 'none';
+      return;
+    }
+
+    newsScrollbar.style.display = 'block';
+
+    var thumbHeight = Math.max(trackHeight * newsList.clientHeight / newsList.scrollHeight, 28);
+    var maxThumbTop = trackHeight - thumbHeight;
+    var thumbTop = maxThumbTop * newsList.scrollTop / scrollableHeight;
+
+    newsScrollbarThumb.style.height = thumbHeight + 'px';
+    newsScrollbarThumb.style.top = thumbTop + 'px';
+  }
+
+  newsList.addEventListener('scroll', updateNewsScrollbar);
+  window.addEventListener('resize', updateNewsScrollbar);
+
+  newsScrollbarThumb.addEventListener('pointerdown', function(event) {
+    isDraggingNewsScrollbar = true;
+    dragStartY = event.clientY;
+    dragStartScrollTop = newsList.scrollTop;
+    newsScrollbarThumb.setPointerCapture(event.pointerId);
+    document.body.style.userSelect = 'none';
+    event.preventDefault();
+  });
+
+  document.addEventListener('pointermove', function(event) {
+    if (!isDraggingNewsScrollbar) {
+      return;
+    }
+
+    var trackHeight = newsScrollbar.clientHeight;
+    var thumbHeight = newsScrollbarThumb.offsetHeight;
+    var maxThumbTop = trackHeight - thumbHeight;
+    var maxScrollTop = newsList.scrollHeight - newsList.clientHeight;
+
+    if (maxThumbTop <= 0 || maxScrollTop <= 0) {
+      return;
+    }
+
+    var dragDistance = event.clientY - dragStartY;
+    newsList.scrollTop = dragStartScrollTop + dragDistance * maxScrollTop / maxThumbTop;
+  });
+
+  document.addEventListener('pointerup', function() {
+    isDraggingNewsScrollbar = false;
+    document.body.style.userSelect = '';
+  });
+
+  newsScrollbar.addEventListener('pointerdown', function(event) {
+    if (event.target === newsScrollbarThumb) {
+      return;
+    }
+
+    var trackRect = newsScrollbar.getBoundingClientRect();
+    var thumbHeight = newsScrollbarThumb.offsetHeight;
+    var maxThumbTop = newsScrollbar.clientHeight - thumbHeight;
+    var maxScrollTop = newsList.scrollHeight - newsList.clientHeight;
+    var targetThumbTop = event.clientY - trackRect.top - thumbHeight / 2;
+
+    if (maxThumbTop <= 0 || maxScrollTop <= 0) {
+      return;
+    }
+
+    newsList.scrollTop = clampNewsScrollbar(targetThumbTop, 0, maxThumbTop) * maxScrollTop / maxThumbTop;
+  });
+
+  updateNewsScrollbar();
+}
+
 hideallbibs();
 </script>
 </body>
