@@ -55,6 +55,45 @@
     display: none;
   }
 
+  .publication-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .publication-filter {
+    display: inline-flex;
+    border: 1px solid #d8d8d8;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .publication-filter button {
+    border: 0;
+    border-left: 1px solid #d8d8d8;
+    background: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .publication-filter button:first-child {
+    border-left: 0;
+  }
+
+  .publication-filter button.active {
+    background: #1772d0;
+    color: #ffffff;
+  }
+
+  .publication-list[data-view="selected"] tr:not(.selected-paper) {
+    display: none;
+  }
+
   .news-scroll-wrap {
     position: relative;
     margin: 1em 0;
@@ -226,9 +265,17 @@
 </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
+  <tr><td>
+    <div class="publication-header">
+      <sectionheading>&nbsp;&nbsp;Publications</sectionheading>
+      <div class="publication-filter" aria-label="Publication filter">
+        <button type="button" class="active" data-publication-view="selected" aria-pressed="true">Selected Papers</button>
+        <button type="button" data-publication-view="all" aria-pressed="false">All</button>
+      </div>
+    </div>
+  </td></tr>
 </table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+<table id="publication-list" class="publication-list" data-view="selected" width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
   <tr>
     <td width="33%" valign="top" align="center">
@@ -280,7 +327,7 @@
     </td>
   </tr>
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/NeuroSonic.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -337,7 +384,7 @@
     </td>
   </tr>
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/jet.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -388,7 +435,7 @@
     </td>
   </tr>
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/horizon.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -481,7 +528,7 @@
     </td>
   </tr>
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/ouroboros.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -641,7 +688,7 @@
   </tr>
 
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/iclr25.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -752,7 +799,7 @@
   </tr>
 
 
-  <tr>
+  <tr class="selected-paper">
     <td width="33%" valign="top" align="center">
         <a href="#">
         <img src="img/veatic.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
@@ -808,6 +855,8 @@
     </td>
   </tr>
 
+</table>
+
 <table width="100%" align="center" border="0" cellpadding="10">
   <tr>
     <td>
@@ -852,6 +901,51 @@
 var newsList = document.querySelector('.news-list');
 var newsScrollbar = document.querySelector('.news-scrollbar');
 var newsScrollbarThumb = document.querySelector('.news-scrollbar-thumb');
+var publicationList = document.querySelector('.publication-list');
+var publicationFilterButtons = document.querySelectorAll('[data-publication-view]');
+
+function isSelectedPaper(row) {
+  var info = row.getElementsByTagName('p')[0];
+  if (!info) {
+    return false;
+  }
+
+  var text = info.textContent.replace(/\s+/g, ' ').trim();
+  var firstAuthor = text.split(',')[0].indexOf('Yifan Wang') !== -1;
+  var coFirst = text.indexOf('Equal contribution') !== -1 &&
+    /<b>\s*Yifan Wang\s*<\/b>\s*<sup>\s*\*\s*<\/sup>/i.test(info.innerHTML);
+
+  return firstAuthor || coFirst;
+}
+
+function setPublicationView(view) {
+  if (!publicationList) {
+    return;
+  }
+
+  publicationList.setAttribute('data-view', view);
+
+  for (var i = 0; i < publicationFilterButtons.length; i++) {
+    var isActive = publicationFilterButtons[i].getAttribute('data-publication-view') == view;
+    publicationFilterButtons[i].className = isActive ? 'active' : '';
+    publicationFilterButtons[i].setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  }
+}
+
+if (publicationList) {
+  var publicationRows = publicationList.getElementsByTagName('tr');
+
+  for (var i = 0; i < publicationRows.length; i++) {
+    publicationRows[i].classList.toggle('selected-paper', isSelectedPaper(publicationRows[i]));
+  }
+
+}
+
+for (var i = 0; i < publicationFilterButtons.length; i++) {
+  publicationFilterButtons[i].addEventListener('click', function() {
+    setPublicationView(this.getAttribute('data-publication-view'));
+  });
+}
 
 if (newsList && newsScrollbar && newsScrollbarThumb) {
   var isDraggingNewsScrollbar = false;
