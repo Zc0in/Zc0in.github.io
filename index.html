@@ -239,7 +239,7 @@
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <div class="news-scroll-wrap">
       <ul class="news-list">
-        <li> [06/2026] Our papers <a href="https://yfwang.me/">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
+        <li> [06/2026] Our papers <a href="https://arxiv.org/abs/2607.16824">RegToken</a> and <a href="https://arxiv.org/abs/2511.17731/">VisReason</a> have been accepted by ECCV 2026! </li>
         <li> [06/2026] Our paper <a href="https://y-research-sbu.github.io/NeuroSonic/">NeuroSonic</a> has been accepted by MICCAI 2026! </li>
         <li> [05/2026] I successfully passed the RPE and am now a PhD candidate! </li>
         <li> [05/2026] I will join Bosch Center for Artificial Intelligence this summer as a research intern with <a href="https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en">Xiaoqi Wang</a>! </li>
@@ -276,6 +276,60 @@
   </td></tr>
 </table>
 <table id="publication-list" class="publication-list" data-view="selected" width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr class="selected-paper">
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/regtoken.png" alt="sym" width="300" height="200" loading="lazy" decoding="async" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <a href="https://arxiv.org/abs/2607.16824">
+
+            <heading>Test-Time Registers as Global Priors for Tokenized Image Generation</heading></a>
+            <br>
+            Cheng-Yao Hong<sup>*</sup>, 
+            <b>Yifan Wang</b><sup>*</sup>, 
+            Yuewei Lin, 
+            Chenyu You 
+            (* Equal contribution)
+            <br>
+            ECCV 2026
+        </p>
+
+        <div class="paper" id="regtoken">
+        <a href="https://y-research-sbu.github.io/RegToken/">webpage</a> |
+        <a href="javascript:toggleblock('regtoken_abs')">abstract</a> |
+        <a href="https://arxiv.org/abs/2607.16824">paper</a> |
+        <a href="https://github.com/Y-Research-SBU/RegToken">code</a> |
+
+        <p align="justify">
+            <i id="regtoken_abs">
+            Attention-based models often develop attention sinks, where a small number of tokens repeatedly attract attention and 
+            accumulate unusually large activations. In vision transformers, these outliers are closely related to registers, 
+            which have been diagnostically linked to global, low-frequency image structure. Existing work has largely studied 
+            registers through interpretability analyses and linear probes, leaving open whether they can be operationalized as 
+            plug-and-play signals for generation without retraining. We revisit this question in tokenized image generation. 
+            Using OpenCLIP and DINOv2 on ImageNet, we find that test-time register features exhibit stronger low-frequency 
+            concentration than both [CLS] readouts and patch-mean features, and show a consistent (albeit moderate) correlation with 
+            pixel-space DCT low-frequency energy. Motivated by these diagnostics, we introduce RegToken, a training-free procedure 
+            that converts register structure into a small set of global prior tokens by (i) NFN-based layer localization, 
+            (ii) TokenRank-guided subspace extraction, and (iii) a projection-and-conservation update on the register subspace. 
+            Inserted into a frozen compact 1D token generation pipeline, RegToken improves ImageNet generation and alignment metrics 
+            (e.g., FID-5k 20.5 to 20.1, SigLIP 3.6 to 3.9) without modifying pretrained weights, and accelerates test-time optimization 
+            (Steps@τ 74 to 52). Overall, our results suggest that structures often viewed as attention artifacts can be repurposed as 
+            lightweight global priors for tokenized generation.
+            </i>
+            </p>
+
+        </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center">
